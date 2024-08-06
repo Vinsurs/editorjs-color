@@ -1,0 +1,51 @@
+@mixin colorActive {
+    outline: 2px solid rgb(227 227 10 / 0.35);
+    box-shadow: 0 0 0 3px rgb(227 227 10 / 0.35);
+}
+.ce-inline-tool--color {
+    &__actions-container {
+        padding: 12px;
+        width: 184px;
+        max-height: 320px;
+        overflow-y: auto;
+    }
+    &__action-label {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 2;
+    }
+    &__action-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    &__action-list-text-color {
+        gap: 8px;
+    }
+    &__action-list-bg-color {
+        gap: 8px;
+    }
+    &__action-list-item {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+        user-select: none;
+        cursor: pointer;
+        &:hover {
+            @include colorActive;
+        }
+    }
+    &__action-list-item--active {
+        @include colorActive;
+    }
+}

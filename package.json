@@ -1,0 +1,49 @@
+{
+  "name": "editorjs-color",
+  "version": "1.0.0",
+  "description": "editorjs plugin to provide color palette functionality",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "prepublish": "npm run build"
+  },
+  "keywords": ["editorjs", "color", "plugin", "editorjs-color"],
+  "author": "vinsurs <2407232109@qq.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinsurs/editorjs-color.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.19.2",
+    "rollup-plugin-clean2": "^1.0.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-sass": "^1.13.1",
+    "sass": "^1.77.8",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "@editorjs/editorjs": "^2.29.0"
+  },
+  "dependencies": {
+    "@codexteam/icons": "^0.3.2",
+    "@vinsurs/selection-utils": "^0.1.1"
+  }
+}
